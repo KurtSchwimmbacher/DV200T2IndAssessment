@@ -1,14 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+import axios from 'axios';
+
 import { useState } from 'react';
 
 function CreatePlantForm() {
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        console.log(plantImage)
-    }
 
     const [plantName,setPlantName] = useState("");
     const [plantSpecies, setPlantSpecies] = useState("");
@@ -16,6 +13,30 @@ function CreatePlantForm() {
     const [plantDesc, setPlantDesc] = useState("");
     const [plantReq, setPlantReq] = useState("");
     const [plantPrice, setPlantPrice] = useState(0);
+    const [message, setMessage] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log(plantImage)
+
+        try{
+            const plantResponse = await axios.post('http://localhost:5000/api/plants/create',{
+                // put fields from schema
+                name: plantName,
+                species: plantSpecies,
+                image: plantImage,
+                description: plantDesc,
+                requirements: plantReq,
+                price: plantPrice,
+            });
+            setMessage("plant created successfully");
+        }
+        catch (error){
+            setMessage("error creating plant");
+        }
+    }
+
+
 
   return (
     <Form>
@@ -53,6 +74,7 @@ function CreatePlantForm() {
       <Button variant="primary" type="submit" onClick={handleSubmit}>
         Submit
       </Button>
+      {message && <p>{message}</p>}
     </Form>
   );
 }
