@@ -10,7 +10,7 @@ const PlantSchema = new mongoose.Schema({
         required: true,
     },
     image: {
-        type: String, // Assuming you store the image path
+        type: String,
         required: true,
     },
     description: {
