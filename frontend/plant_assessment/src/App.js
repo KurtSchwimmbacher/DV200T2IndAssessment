@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import CreatePlant from "./pages/CreatePlant";
 import EditPlant from "./pages/EditPlants";
 import PlantDetails from "./pages/PlantDetails";
-import PlantList from "./pages/PlantDetails";
+import PlantList from "./pages/PlantList";
 
 
 function App() {
