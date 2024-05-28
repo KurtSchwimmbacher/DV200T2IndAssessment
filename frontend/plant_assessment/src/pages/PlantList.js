@@ -39,6 +39,7 @@ function PlantList() {
                         <Col className="col-4" key={index}>
                             
                             <PlantCard 
+                            plantID={plant._id}
                             image={`http://localhost:5000/plant-images/${plant.image}`} 
                             name={plant.name} 
                             details={plant.description} 
