@@ -12,9 +12,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/plant/:id" element={<PlantDetails />} /> */}
-            {/* above to replace below when db is set up */}
-            <Route path="/singleplant" element={<PlantDetails />} />
+            <Route path="/plant/:id" element={<PlantDetails />} />
             <Route path="/list" element={<PlantList />} />
             <Route path="/edit" element={<EditPlant />} />
             <Route path="/post" element={<CreatePlant />} />

@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import NavigationBar from "../components/NavigationBar";
+import PlantCard from "../components/PlantCard";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -35,19 +36,13 @@ function PlantList() {
                 </Row>
                 <Row>
                     {plantsArr.map((plant, index) => (
-                        <Col key={index}>
-                            <div>
-                                <h2>{plant.name}</h2>
-                                <img 
-                                    src={`http://localhost:5000/plant-images/${plant.image}`} 
-                                    alt={plant.name} 
-                                    // style={{ width: '100px', height: '100px' }} // Adjust size as needed
-                                />
-                                <p>{plant.species}</p>
-                                <p>{plant.description}</p>
-                                <p>{plant.requirements}</p>
-                                <p>${plant.price}</p>
-                            </div>
+                        <Col className="col-4" key={index}>
+                            
+                            <PlantCard 
+                            image={`http://localhost:5000/plant-images/${plant.image}`} 
+                            name={plant.name} 
+                            details={plant.description} 
+                            price={plant.price} />
                         </Col>
                     ))}
                 </Row>
