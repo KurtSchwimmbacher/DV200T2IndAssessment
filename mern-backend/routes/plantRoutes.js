@@ -55,6 +55,23 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+// to find one plant
+router.post('/find' ,async (req,res) =>{
+    const {name} = req.body;
+
+    try {
+        // find plant name
+        const plant = await Plant.findOne({ name });
+        if(!plant){
+            return res.status(400).json({message: 'Invalid Name'});
+        }
+
+        res.status(200).json({message: 'Plant found successfully', plant});
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+})
+
 // Update a plant by ID
 router.patch('/update/:id', async (req, res) => {
     const updates = Object.keys(req.body);

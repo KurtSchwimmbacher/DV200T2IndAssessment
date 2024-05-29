@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import NavigationBar from "../components/NavigationBar";
-
+import EditPlantForm from "../components/EditPlantForm";
 
 
 // import "../styles/HomePage.css";
@@ -26,6 +26,11 @@ function EditPlant() {
                             Hello World
                             Edit Plant
                         </h1>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <EditPlantForm />
                     </Col>
                 </Row>
             </Container>

@@ -61,6 +61,9 @@ function CreatePlantForm() {
             <Form.Group className="mb-3" controlId="formPlantRequirements">
                 <Form.Label>Plant Requirements</Form.Label>
                 <Form.Control type="text" placeholder="Enter plant requirements" onChange={e => setPlantReq(e.target.value)} />
+                <Form.Text className="text-muted">
+                    Seperate requirements with a comma
+                </Form.Text>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formPlantPrice">
                 <Form.Label>Price</Form.Label>

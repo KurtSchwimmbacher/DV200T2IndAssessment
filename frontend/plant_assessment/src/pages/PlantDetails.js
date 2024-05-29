@@ -51,7 +51,7 @@ function PlantDetails() {
                 </Row>
                 <Row>
                     <Col>
-                        {plantObj && <img src={`http://localhost:5000/plant-images/${plantObj.image}`}/>}
+                        {plantObj && <img src={`http://localhost:5000/plant-images/${plantObj.image}`} style={{width:500}}/>}
                         <h2>{plantObj.name}</h2>
                         <h5>{plantObj.species}</h5>
                         <p>{plantObj.description}</p>
