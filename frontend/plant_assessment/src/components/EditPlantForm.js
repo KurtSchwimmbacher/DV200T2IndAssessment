@@ -20,6 +20,12 @@ function EditPlantForm() {
         e.preventDefault();
         if(plantName != ""){
             console.log(plantName)
+            try {
+                const plantUpdate = await axios.patch(`http://localhost:7000/api/plants/update/${plantData._id}`, { name: plantName });
+                console.log(plantUpdate)
+            } catch (error) {
+                console.log(error)
+            }
         }
         else{
             console.log('no fields updated')
@@ -31,7 +37,7 @@ function EditPlantForm() {
         console.log(plantToFind)
 
         try{
-            const response = await axios.post('http://localhost:5000/api/plants/find', { name: plantToFind });
+            const response = await axios.post('http://localhost:7000/api/plants/find', { name: plantToFind });
             console.log(response.data)
             if(response.data){
                 setMessage(response.data.message)
@@ -57,7 +63,7 @@ function EditPlantForm() {
         </Form>
 
         {plantData && <Form>
-            <img src={`http://localhost:5000/plant-images/${plantData.image}`} alt='plant image'  style={{width:300}}/>
+            <img src={`http://localhost:7000/plant-images/${plantData.image}`} alt='plant image'  style={{width:300}}/>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Plant Name</Form.Label>
                 <Form.Control type="text" placeholder={plantData.name} onChange={e=>setPlantName(e.target.value)}/>

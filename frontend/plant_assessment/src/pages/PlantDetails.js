@@ -24,7 +24,7 @@ function PlantDetails() {
     useEffect(() => {
         const fetchPlants = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/plants/${plantID}`);
+                const response = await axios.get(`http://localhost:7000/api/plants/${plantID}`);
                 console.log(response.data)
                 setPlantObj(response.data)
             } catch (error) {
@@ -51,7 +51,7 @@ function PlantDetails() {
                 </Row>
                 <Row>
                     <Col>
-                        {plantObj && <img src={`http://localhost:5000/plant-images/${plantObj.image}`} style={{width:500}}/>}
+                        {plantObj && <img src={`http://localhost:7000/plant-images/${plantObj.image}`} style={{width:500}} alt=""/>}
                         <h2>{plantObj.name}</h2>
                         <h5>{plantObj.species}</h5>
                         <p>{plantObj.description}</p>

@@ -26,7 +26,7 @@ function CreatePlantForm() {
         formData.append('price', plantPrice);
 
         try {
-            const plantResponse = await axios.post('http://localhost:5000/api/plants/create', formData, {
+            const plantResponse = await axios.post('http://localhost:7000/api/plants/create', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -62,7 +62,7 @@ function CreatePlantForm() {
                 <Form.Label>Plant Requirements</Form.Label>
                 <Form.Control type="text" placeholder="Enter plant requirements" onChange={e => setPlantReq(e.target.value)} />
                 <Form.Text className="text-muted">
-                    Seperate requirements with a comma
+                    Separate requirements with a comma
                 </Form.Text>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formPlantPrice">
