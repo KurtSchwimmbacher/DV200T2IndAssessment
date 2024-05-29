@@ -9,6 +9,22 @@ function EditPlantForm() {
     const [plantData, setPlantData] = useState(null);
     const [message, setMessage] = useState("");
 
+    const [plantName, setPlantName] = useState("");
+    const [plantSpecies, setPlantSpecies] = useState("");
+    const [plantDesc, setPlantDesc] = useState("");
+    const [plantReq,setPlantReq] = useState("");
+    const [plantImg, setPlantImage] = useState("");
+    const [plantPrice, setPlantPrice] = useState("");
+
+    const handleSubmitEditPlant = async (e) =>{
+        e.preventDefault();
+        if(plantName != ""){
+            console.log(plantName)
+        }
+        else{
+            console.log('no fields updated')
+        }
+    }
     
     const handleSubmitFindPlant = async (e) => {
         e.preventDefault();
@@ -44,7 +60,7 @@ function EditPlantForm() {
             <img src={`http://localhost:5000/plant-images/${plantData.image}`} alt='plant image'  style={{width:300}}/>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Plant Name</Form.Label>
-                <Form.Control type="text" placeholder={plantData.name} />
+                <Form.Control type="text" placeholder={plantData.name} onChange={e=>setPlantName(e.target.value)}/>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Plant Species</Form.Label>
@@ -65,7 +81,7 @@ function EditPlantForm() {
                 <Form.Label>Plant Price</Form.Label>
                 <Form.Control type="text" placeholder={plantData.price} />
             </Form.Group>
-            <Button variant="primary" type="submit" >
+            <Button variant="primary" type="submit" onClick={handleSubmitEditPlant} >
                 Submit
             </Button>
         </Form>}
