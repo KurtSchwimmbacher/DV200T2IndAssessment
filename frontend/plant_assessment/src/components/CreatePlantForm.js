@@ -32,6 +32,7 @@ function CreatePlantForm() {
                 }
             });
             setMessage("Plant created successfully");
+            alert("Plant created successfully")
         } catch (error) {
             setMessage(error.response.data.error);
         }
@@ -72,7 +73,6 @@ function CreatePlantForm() {
             <Button variant="primary" type="submit">
                 Submit
             </Button>
-            {message && <p>{message}</p>}
         </Form>
     );
 }

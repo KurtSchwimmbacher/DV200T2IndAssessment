@@ -70,6 +70,32 @@ function EditPlantForm() {
         }
     };
 
+    const handleDeletePlant = async (e)=>{
+        e.preventDefault();
+        const plantID = plantData._id;
+        console.log(plantID)
+        try {
+            const deleteResponse = await axios.delete(`http://localhost:7000/api/plants/delete/${plantID}`)
+            console.log(deleteResponse)
+            alert("plant deleted")
+
+            
+            // Reset the form fields
+            setPlantToFind("");
+            setPlantData(null);
+            setPlantName("");
+            setPlantSpecies("");
+            setPlantDesc("");
+            setPlantReq("");
+            setPlantImage(null);
+            setPlantPrice("");
+            setMessage("");
+        } catch (error) {
+            console.log(error)
+            alert("error deleting plant")
+        }
+    }
+
     return (
         <>
             <Form>
@@ -115,7 +141,7 @@ function EditPlantForm() {
                 <Button variant="primary" type="submit" onClick={handleSubmitEditPlant}>
                     Edit Plant
                 </Button>
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" onClick={handleDeletePlant}>
                     Delete Plant Entry
                 </Button>
             </Form>}
