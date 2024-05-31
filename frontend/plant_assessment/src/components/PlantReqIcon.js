@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import fullSun from '../assets/Icons/clear-svgrepo-com.svg';
-import freqWater from '../assets/Icons/heavy-rain-svgrepo-com.svg';
+import fullSun from '../assets/Icons/day-forecast-hot-svgrepo-com.svg';
+import freqWater from '../assets/Icons/climate-cloud-forecast-2-svgrepo-com.svg';
 
 
 function PlantReqIcon(props) {
