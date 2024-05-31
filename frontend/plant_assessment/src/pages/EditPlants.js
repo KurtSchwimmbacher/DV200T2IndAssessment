@@ -22,10 +22,9 @@ function EditPlant() {
         <NavigationBar />
             <Container>
                 <Row>
-                    <Col>
-                        <h1>
-                            Hello World
-                            Edit Plant
+                    <Col className="col-12 details-title-con">
+                        <h1 className="home-title">
+                            Edit A <b className="green-title-word">Plant</b> Entry
                         </h1>
                     </Col>
                 </Row>
