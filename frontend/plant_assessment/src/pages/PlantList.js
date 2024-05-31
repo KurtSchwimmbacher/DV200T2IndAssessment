@@ -8,6 +8,8 @@ import PlantCard from "../components/PlantCard";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
+import '../styles/PlantList.css';
+
 function PlantList() {
     const [plantsArr, setPlantsArr] = useState([]);
 
@@ -31,7 +33,13 @@ function PlantList() {
             <Container>
                 <Row>
                     <Col>
-                        <h1>Plant List</h1>
+                        <h1 className="mt-5 mb-3 plantlist-title">Our Full Listing of <b className="green-title-word">Plants</b> Available</h1>
+                    </Col>
+                </Row>
+                {/* filters */}
+                <Row>
+                    <Col>
+                        Filters
                     </Col>
                 </Row>
                 <Row>

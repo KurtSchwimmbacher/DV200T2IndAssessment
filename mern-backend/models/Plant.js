@@ -25,6 +25,6 @@ const PlantSchema = new mongoose.Schema({
         type: Number,
         required: true,
     }
-});
+}, { timestamps: true }); // Add timestamps to the schema
 
 module.exports = mongoose.model("Plant", PlantSchema);

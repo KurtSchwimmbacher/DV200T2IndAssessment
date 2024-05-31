@@ -1,0 +1,18 @@
+.footer-overlay{
+    padding: 2rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+footer{
+
+    bottom: 0;
+    width: 100%;
+}
+.footer-title{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 140px;
+    letter-spacing: 0.2em;
+    color: white;
+}

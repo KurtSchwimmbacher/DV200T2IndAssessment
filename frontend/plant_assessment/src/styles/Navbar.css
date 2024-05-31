@@ -1,0 +1,30 @@
+
+/* navbar styling */
+.navbar-brand{
+    font-family: "Bebas Neue", sans-serif ;
+    color: #231F20;
+    font-size: 32px;
+  }
+  .navbar-brand:hover{
+    color: #576E51;
+    cursor: pointer;
+  }
+
+  .navbar-parent{
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #576E51;
+  }
+
+  .navbar-link{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .link-to{
+    text-decoration: none;
+    color: #231F20;
+  }
+  .link-to:hover{
+    color: #576E51;
+    border-bottom: 2px solid #576E51;
+  }

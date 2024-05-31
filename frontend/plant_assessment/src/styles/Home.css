@@ -1,0 +1,138 @@
+/* Home Page */
+/* CTA Section and nav */
+/* ============================================================================================================================= */
+.home-title{
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 5vh;
+    font-size: 88px;
+}
+
+.home-brand{
+    font-family: "Bebas Neue", sans-serif ;
+    font-size: 88px;
+    color: #576E51;
+}
+
+
+.home-cta{
+    text-align: center;
+    margin-top: 12vh;
+    color: #576E51;
+    font-weight: 100;
+}
+
+.button-con{
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.cta-btn{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 25px;
+    border: 2px solid #576E51;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn-primary,.btn-primary:hover{
+    background-color: #576E51 ;
+    color: #ffffff ;
+    border: 2px solid #576E51;
+}
+
+
+.btn-primary:hover, .btn-secondary:hover ,.btn-tertiary:hover{
+    box-shadow: 5px 5px 6px 0px #576e516d;
+}
+
+.btn-secondary,.btn-secondary:hover{
+    background-color: #ffffff;
+    color: #576E51;
+    border: 2px solid #576E51;
+}
+
+.btn-active, .btn-active:hover{
+    background-color: #231F20;
+    color: #ffffff;
+    border: 2px solid #231F20;
+}
+/* ============================================================================================================================= */
+
+
+/* image section */
+.hero-img-holder{
+    width: 100%;
+    height: 60vh;
+    background-image: url('../assets/hero-plant-2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 5vh;
+}
+/* ============================================================================================================================= */
+
+
+/* plants that suit your placement section */
+.link-to-list{
+    color: white;
+    text-decoration: none;
+}
+
+
+.placements-title{
+    color: #231F20;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 66px;
+    text-align: center;
+}
+.placements-subtitle{
+    text-align: center;
+    color: #576E51;
+    font-weight: 100;
+}
+
+.home-card{
+    width: 100%;
+}
+
+.home-card-image{
+    background-size: cover !important;
+}
+
+.home-card-overlay{
+    background-color: rgba(0, 0, 0, 0.35);
+    padding-top: 50%;
+}
+
+.home-card-title{
+    color: white;
+    font-family: "Bebas Neue", sans-serif ;
+    font-size: 48px;
+}
+.home-card-text{
+    color: white;
+    font-size: 14px;
+}
+/* ============================================================================================================================= */
+
+
+/* New Listings section */
+
+.new-listings-title{
+    font-family: "Bebas Neue", sans-serif ;
+    color: #231F20;
+    font-size: 66px;
+}
+
+.green-title-word{
+    color: #576E51;
+    font-weight: 400;
+}
+
+
+.new-listings-subtitle{
+    color: #576E51;
+    font-weight: 100;
+}

@@ -16,6 +16,16 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+// Endpoint to get the latest 3 products
+router.get('/latest', async (req, res) => {
+    try {
+        const latestPlants = await Plant.find().sort({ createdAt: -1 }).limit(3);
+        res.json(latestPlants);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 // Create a new plant
 // upload.single('image') => image has to correspond to field being sent from frontend
 router.post('/create', upload.single('image'), async (req, res) => {
@@ -102,8 +112,6 @@ router.patch('/update/:id', upload.single('image'), async (req, res) => {
         res.status(400).send(error);
     }
 });
-
-
 
 // Delete a plant by ID
 router.delete('/delete/:id', async (req, res) => {
