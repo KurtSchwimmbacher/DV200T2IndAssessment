@@ -73,9 +73,9 @@ router.post('/find' ,async (req,res) =>{
 })
 
 // Update a plant by ID
-router.patch('/update/:id', async (req, res) => {
+router.patch('/update/:id', upload.single('image'), async (req, res) => {
     const updates = Object.keys(req.body);
-    const allowedUpdates = ['name', 'species', 'image', 'description', 'requirements', 'price'];
+    const allowedUpdates = ['name', 'species', 'description', 'requirements', 'price'];
     const isValidOperation = updates.every(update => allowedUpdates.includes(update));
 
     if (!isValidOperation) {
@@ -83,15 +83,27 @@ router.patch('/update/:id', async (req, res) => {
     }
 
     try {
-        const plant = await Plant.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+        const plant = await Plant.findById(req.params.id);
         if (!plant) {
             return res.status(404).send();
         }
+
+        updates.forEach(update => {
+            plant[update] = req.body[update];
+        });
+
+        if (req.file) {
+            plant.image = req.file.filename; // Update the image if a new file is uploaded
+        }
+
+        await plant.save();
         res.send(plant);
     } catch (error) {
         res.status(400).send(error);
     }
 });
+
+
 
 // Delete a plant by ID
 router.delete('/delete/:id', async (req, res) => {
