@@ -13,6 +13,7 @@ import FooterComp from "../components/FooterComp";
 
 
 import "../styles/DetailsPage.css";
+import PlantReqIcon from "../components/PlantReqIcon";
 
 
 
@@ -72,6 +73,7 @@ function PlantDetails() {
                 {plantReq.map(requirement => (
                     <Col key={requirement} className="requirement-col">
                         <p>{requirement}</p>
+                        <PlantReqIcon condition={requirement} />
                     </Col>
                 ))}
                 </Row>
