@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 
 import NavigationBar from "../components/NavigationBar";
 import EditPlantForm from "../components/EditPlantForm";
+import FooterComp from "../components/FooterComp";
 
 
 // import "../styles/HomePage.css";
@@ -34,6 +35,8 @@ function EditPlant() {
                     </Col>
                 </Row>
             </Container>
+
+            <FooterComp />
         </>
     );
 }

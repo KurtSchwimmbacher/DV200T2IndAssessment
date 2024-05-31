@@ -1,0 +1,63 @@
+.details-con{
+    margin-top: -70vh;
+}
+
+.details-plant-title{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 72px !important;
+    color: #ffffff;
+    text-shadow: 6px 4px 6px rgba(0, 0, 0, 0.30);
+    letter-spacing: 0.1em;
+}
+
+.details-plant-name{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 124px !important;
+    color: #ffffff;
+    text-shadow: 8px 6px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.2em;
+}
+
+.hero-img-con{
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+
+.details-img-header{
+    margin-top: -15%;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.details-info-row{
+    margin-top: 40vh;
+}
+
+.details-title{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-family: "Bebas Neue", sans-serif;
+    color: #231F20;
+}
+
+.title-name{
+    font-size: 64px;
+    letter-spacing: 0.1em;
+}
+
+.title-price{
+    color: #576E51;
+}
+
+.plant-req{
+    color: #576E51;
+    font-size: 48px;
+}
+
+.requirement-col{
+    text-align: center;
+}

@@ -9,6 +9,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 import '../styles/PlantList.css';
+import FooterComp from "../components/FooterComp";
 
 function PlantList() {
     const [plantsArr, setPlantsArr] = useState([]);
@@ -56,6 +57,8 @@ function PlantList() {
                     ))}
                 </Row>
             </Container>
+
+            <FooterComp />
         </>
     );
 }

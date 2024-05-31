@@ -24,7 +24,7 @@ function Home() {
             {/* hero section */}
             <Container>
                 <Row>
-                    <Col className="col-8 home-title-con">
+                    <Col className="col-12 details-title-con">
                         <h1 className="home-title">
                             FIND BEAUTIFUL PLANTS ONLY AT 
                         </h1>

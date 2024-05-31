@@ -9,9 +9,10 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
 import axios from "axios";
+import FooterComp from "../components/FooterComp";
 
 
-// import "../styles/HomePage.css";
+import "../styles/DetailsPage.css";
 
 
 
@@ -20,46 +21,63 @@ function PlantDetails() {
     const { id } = useParams(); // Get the id from the URL params
     const [plantID, setPlantID] = useState(id);
     const [plantObj, setPlantObj] = useState({});
+    const[plantReq, setPlantReq] = useState([]);
 
     useEffect(() => {
         const fetchPlants = async () => {
             try {
                 const response = await axios.get(`http://localhost:7000/api/plants/${plantID}`);
                 console.log(response.data)
-                setPlantObj(response.data)
+                setPlantObj(response.data);
+                setPlantReq(response.data.requirements.split(","));
             } catch (error) {
                 console.log("Error fetching plant list", error);
             }
         };
-
-        fetchPlants();
+    
+        fetchPlants(); 
     }, []);
+    
    
 
 
     return(
         <>
         <NavigationBar />
-            <Container>
+        <div className="hero-img-con">
+            {plantObj && <img src={`http://localhost:7000/plant-images/${plantObj.image}`} alt="" className="details-img-header"/>}
+        </div>
+            <Container className="details-con">
                 <Row>
+                    <Col className="details-title">
+                        <h1 className="details-plant-title">Individual Details on the:</h1>
+                        
+                        <h1 className="details-plant-name">{plantObj.name}</h1>
+                    </Col>
+                </Row>
+                <Row className="details-info-row">
                     <Col>
-                        <h1>
-                            Hello World
-                            Plant Details
-                        </h1>
+                        <h1 className="details-title title-name">{plantObj.name}</h1>
+                        <h3 className="details-title title-species">{plantObj.species}</h3>
+                        <h6>{plantObj.description}</h6>
+                        <h3 className="mt-3 details-title title-price">R{plantObj.price}.00</h3>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        {plantObj && <img src={`http://localhost:7000/plant-images/${plantObj.image}`} style={{width:500}} alt=""/>}
-                        <h2>{plantObj.name}</h2>
-                        <h5>{plantObj.species}</h5>
-                        <p>{plantObj.description}</p>
-                        <p>{plantObj.requirements}</p>
-                        <p>R{plantObj.price}.00</p>
+                        <h1 className="mt-2 details-title plant-req">Plant Requirements:    </h1>
                     </Col>
+                </Row>
+                <Row>
+                {plantReq.map(requirement => (
+                    <Col key={requirement} className="requirement-col">
+                        <p>{requirement}</p>
+                    </Col>
+                ))}
                 </Row>
             </Container>
+
+            <FooterComp />
         </>
     );
 }

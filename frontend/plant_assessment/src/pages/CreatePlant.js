@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import NavigationBar from "../components/NavigationBar";
 import CreatePlantForm from "../components/CreatePlantForm";
+import FooterComp from "../components/FooterComp";
 
 
 
@@ -34,6 +35,8 @@ function CreatePlant() {
                     </Col>
                 </Row>
             </Container>
+
+            <FooterComp />
         </>
     );
 }
