@@ -1,5 +1,9 @@
 # Plantopia - A Plant-themed MERN CRUD Application
 
+##Video Explanation
+- The link below is to google drive version of a recording where I showcase and explain some of the key features of this website
+https://drive.google.com/file/d/1t7GbRo82hQm16Nb5GJBeCIoLifykU0KT/view?usp=sharing
+
 ## Overview
 
 Plantopia is a full-stack web application built using the MERN stack (MongoDB, Express, React, Node.js) that allows users to explore and manage a collection of plants. The application provides CRUD (Create, Read, Update, Delete) functionality for plant items, along with additional features such as image uploads, pagination, and search functionality.
