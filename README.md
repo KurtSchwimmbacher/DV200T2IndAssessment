@@ -38,7 +38,7 @@ git clone https://github.com/KurtSchwimmbacher/DV200T2IndAssessment.git
 3. **Frontend Setup**:
 - Navigate to the `frontend` directory:
   ```
-  cd plantopia/frontend
+  cd DV200T2IndAssessment/frontend/plant_assessment
   ```
 - Install dependencies:
   ```
@@ -63,6 +63,7 @@ git clone https://github.com/KurtSchwimmbacher/DV200T2IndAssessment.git
 - React
 - Axios
 - React Router
+- React Bootstrap
 - **Styling**:
 - CSS (with optional frameworks like Bootstrap or Material-UI)
 
@@ -88,7 +89,7 @@ git clone https://github.com/KurtSchwimmbacher/DV200T2IndAssessment.git
 
 ## Credits
 
-This project was developed by [Your Name] as an assignment for [Course/Institution Name]. 
+This project was developed by Kurt Schwimmbacher as an assignment for Open Window DV200. 
 
 ## License
 
