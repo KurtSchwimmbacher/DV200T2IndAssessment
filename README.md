@@ -24,7 +24,14 @@ git clone https://github.com/KurtSchwimmbacher/DV200T2IndAssessment.git
   ```
 - Install dependencies:
   ```
-  npm install
+  npm install mongoose
+  npm install express
+  npm install nodemon
+  npm install dotenv
+  npm install multer
+  npm install path
+  npm install bcrypt
+  npm install cors
   ```
 - Create a `.env` file and add your MongoDB connection string:
   ```
@@ -42,7 +49,9 @@ git clone https://github.com/KurtSchwimmbacher/DV200T2IndAssessment.git
   ```
 - Install dependencies:
   ```
-  npm install
+  npm install react-bootstrap
+  npm install axios
+  npm install react-router-dom
   ```
 - Start the React development server:
   ```
