@@ -27,3 +27,7 @@
 .edit-plant-img{
     height: 180vh;
 }
+
+.delete-btn:hover{
+    box-shadow: 5px 5px 6px 0px #576e516d;
+}
