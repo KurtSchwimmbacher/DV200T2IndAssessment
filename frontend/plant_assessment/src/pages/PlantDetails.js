@@ -48,7 +48,7 @@ function PlantDetails() {
         <div className="hero-img-con">
             {plantObj && <img src={`http://localhost:7000/plant-images/${plantObj.image}`} alt="" className="details-img-header"/>}
         </div>
-            <Container className="details-con">
+            <Container className="details-con mb-5">
                 <Row>
                     <Col className="details-title">
                         <h1 className="details-plant-title">Individual Details on the:</h1>
@@ -56,7 +56,7 @@ function PlantDetails() {
                         <h1 className="details-plant-name">{plantObj.name}</h1>
                     </Col>
                 </Row>
-                <Row className="details-info-row">
+                <Row className="details-info-row mb-5">
                     <Col>
                         <h1 className="details-title title-name">{plantObj.name}</h1>
                         <h3 className="details-title title-species">{plantObj.species}</h3>

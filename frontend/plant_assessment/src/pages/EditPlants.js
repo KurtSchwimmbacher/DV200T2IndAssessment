@@ -9,8 +9,8 @@ import EditPlantForm from "../components/EditPlantForm";
 import FooterComp from "../components/FooterComp";
 
 
-// import "../styles/HomePage.css";
-
+import "../styles/EditPlant.css";
+import bamboo from '../assets/bamboo-close-up.jpg';
 
 
 function EditPlant() {
@@ -29,7 +29,7 @@ function EditPlant() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
+                    <Col className="col-12">
                         <EditPlantForm />
                     </Col>
                 </Row>

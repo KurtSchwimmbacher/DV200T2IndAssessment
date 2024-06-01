@@ -31,7 +31,7 @@ function PlantList() {
     return (
         <>
             <NavigationBar />
-            <Container>
+            <Container className="mb-5">
                 <Row>
                     <Col>
                         <h1 className="mt-5 mb-3 plantlist-title">Our Full Listing of <b className="green-title-word">Plants</b> Available</h1>
@@ -43,7 +43,7 @@ function PlantList() {
                         Filters
                     </Col>
                 </Row>
-                <Row>
+                <Row className="mb-5">
                     {plantsArr.map((plant, index) => (
                         <Col className="col-4" key={index}>
                             

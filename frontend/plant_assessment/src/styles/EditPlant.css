@@ -1,0 +1,29 @@
+.edit-plant-title{
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 9vh;
+    margin-bottom: 3vh;
+    font-size: 56px;
+}
+
+.plant-found-alert{
+    background-color: #576E51;
+    font-family: "Bebas Neue", sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.edit-plant-form-find ,.edit-plant-form-details{
+    padding-right: 2rem;
+}
+
+.edit-plant-img-con{
+    width: 60%;
+    margin-left: 48.5%;
+    margin-top: -160vh;
+    overflow: hidden;
+    height: 180vh;
+}
+
+.edit-plant-img{
+    height: 180vh;
+}
