@@ -1,0 +1,31 @@
+.create-plant-form{
+    border-radius: 25px;
+    /* border: 1px solid #576E51; */
+    padding-right: 4rem;
+}
+
+.submit-btn{
+    margin-top: 2vh;
+    border-radius: 25px;
+    padding: 15px;
+    width: 100%;
+}
+
+.form-label{
+    margin-top: 1vh;
+    margin-bottom: 0;
+    font-family: "Bebas Neue", sans-serif;
+    color: #576E51;
+    font-size: 24px;
+}
+
+.bamboo-img-con{
+    width: 51%;
+    margin-left: 49%;
+    margin-top: -152vh;
+    overflow: hidden;
+}
+
+.bamboo-img{
+    height: 160vh;
+}
