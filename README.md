@@ -20,7 +20,7 @@ git clone https://github.com/KurtSchwimmbacher/DV200T2IndAssessment.git
 2. **Backend Setup**:
 - Navigate to the `backend` directory:
   ```
-  cd plantopia/backend
+  cd DV200IndAssessment/backend
   ```
 - Install dependencies:
   ```
