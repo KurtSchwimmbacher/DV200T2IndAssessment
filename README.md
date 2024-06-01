@@ -97,8 +97,11 @@ git clone https://github.com/KurtSchwimmbacher/DV200T2IndAssessment.git
 - Navigate through paginated pages to view more plant items.
 
 ## Visual Designs
-
-
+- All the images used in this website were created using Adobe Firefly AI; an example of a picture and the prompt are below
+![begonia-close-up](https://github.com/KurtSchwimmbacher/DV200T2IndAssessment/assets/125290141/89c3a75b-33e3-4733-9600-0b38a445a33a)
+Prompt: a closeup photograph of a begonia plant against a white background
+- Icons used in the Plant Details Page are sourced from SVGRepo under the following link:
+https://www.svgrepo.com/collection/weather-and-forecast-flat-icons/
 
 ## Credits
 
