@@ -87,6 +87,10 @@ git clone https://github.com/KurtSchwimmbacher/DV200T2IndAssessment.git
 - Use the search bar to find specific plant items by name or attributes.
 - Navigate through paginated pages to view more plant items.
 
+## Visual Designs
+
+
+
 ## Credits
 
 This project was developed by Kurt Schwimmbacher as an assignment for Open Window DV200. 
