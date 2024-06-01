@@ -1,6 +1,6 @@
 # Plantopia - A Plant-themed MERN CRUD Application
 
-##Video Explanation
+## Video Explanation
 - The link below is to google drive version of a recording where I showcase and explain some of the key features of this website
 https://drive.google.com/file/d/1t7GbRo82hQm16Nb5GJBeCIoLifykU0KT/view?usp=sharing
 
