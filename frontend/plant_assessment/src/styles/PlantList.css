@@ -66,3 +66,19 @@
     padding: 10px;
     border: 2px solid #ffffff;
 }
+
+.page-link{
+    color: white !important;
+    background-color: #576E51;
+}
+
+.page-link:hover{
+    color: #576E51 !important;
+    background-color: #576E51;
+}
+
+.active>.page-link{
+    color: white !important;
+    background-color: #576E51;
+    border: 1px solid #576E51;
+}

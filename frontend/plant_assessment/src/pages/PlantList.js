@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Pagination from "react-bootstrap/Pagination";
 import NavigationBar from "../components/NavigationBar";
 import PlantCard from "../components/PlantCard";
 import FooterComp from "../components/FooterComp";
@@ -13,7 +14,8 @@ import "../styles/PlantList.css";
 function PlantList() {
     const [plantsArr, setPlantsArr] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
-    const [filter, setFilter] = useState("");
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 8;
 
     useEffect(() => {
         const fetchPlants = async () => {
@@ -32,6 +34,17 @@ function PlantList() {
     const filteredPlants = plantsArr.filter(plant => 
         plant.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
+
+    // Calculate paginated plants
+    const indexOfLastPlant = currentPage * itemsPerPage;
+    const indexOfFirstPlant = indexOfLastPlant - itemsPerPage;
+    const currentPlants = filteredPlants.slice(indexOfFirstPlant, indexOfLastPlant);
+
+    // Change page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+    // Calculate total pages
+    const totalPages = Math.ceil(filteredPlants.length / itemsPerPage);
 
     return (
         <>
@@ -57,7 +70,7 @@ function PlantList() {
                     </Col>
                 </Row>
                 <Row className="mb-5">
-                    {filteredPlants.map((plant, index) => (
+                    {currentPlants.map((plant, index) => (
                         <Col className="col-4" key={index}>
                             <PlantCard 
                                 plantID={plant._id}
@@ -68,6 +81,23 @@ function PlantList() {
                             />
                         </Col>
                     ))}
+                </Row>
+                {/* Pagination */}
+                <Row>
+                    <Col>
+                        <Pagination className="justify-content-center pagination">
+                            {[...Array(totalPages).keys()].map(number => (
+                                <Pagination.Item 
+                                    key={number + 1} 
+                                    active={number + 1 === currentPage} 
+                                    onClick={() => paginate(number + 1)}
+                                    className="pagination-item"
+                                >
+                                    {number + 1}
+                                </Pagination.Item>
+                            ))}
+                        </Pagination>
+                    </Col>
                 </Row>
             </Container>
             <FooterComp />
