@@ -35,7 +35,7 @@ function NavigationBar() {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <Navbar.Brand className='navbar-brand'>Account</Navbar.Brand>
+        <Navbar.Brand className='navbar-brand-2'>PLANTOPIA</Navbar.Brand>
       </Container>
     </Navbar>
   );

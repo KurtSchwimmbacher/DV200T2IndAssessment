@@ -10,6 +10,12 @@
     cursor: pointer;
   }
 
+  .navbar-brand-2,.navbar-brand-2:hover{
+    color: white;
+    cursor: default;
+  }
+
+
   .navbar-parent{
     background-color: #ffffff !important;
     border-bottom: 1px solid #576E51;

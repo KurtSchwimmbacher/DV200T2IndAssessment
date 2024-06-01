@@ -16,7 +16,6 @@ function App() {
             <Route path="/list" element={<PlantList />} />
             <Route path="/edit" element={<EditPlant />} />
             <Route path="/post" element={<CreatePlant />} />
-
           </Routes>
         </BrowserRouter>
   );
