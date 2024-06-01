@@ -29,10 +29,7 @@ function EditPlantForm() {
         if (!plantReq && !plantData?.requirements) formErrors.plantReq = "Plant requirements are required";
         if (!plantPrice && !plantData?.price) {
             formErrors.plantPrice = "Plant price is required";
-        } else if (plantPrice <= 0) {
-            formErrors.plantPrice = "Plant price must be a positive number";
         }
-
         setErrors(formErrors);
 
         return Object.keys(formErrors).length === 0;

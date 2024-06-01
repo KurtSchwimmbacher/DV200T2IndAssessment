@@ -72,7 +72,7 @@ function PlantDetails() {
                 <Row>
                 {plantReq.map(requirement => (
                     <Col key={requirement} className="requirement-col">
-                        <p>{requirement}</p>
+                        <h4 className="details-title title-species">{requirement}</h4>
                         <PlantReqIcon condition={requirement} />
                     </Col>
                 ))}
